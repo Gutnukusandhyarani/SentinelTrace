@@ -1,0 +1,41 @@
+[
+  {
+    "alert_id": "AUTH_SUCCESS_AFTER_FAILURES:203.0.113.45:2026-11-11T10:05:00",
+    "rule_id": "AUTH_SUCCESS_AFTER_FAILURES",
+    "severity": "CRITICAL",
+    "title": "Successful login after repeated failures",
+    "source_ip": "203.0.113.45",
+    "username": "analyst",
+    "first_seen": "2026-11-11T10:00:00",
+    "last_seen": "2026-11-11T10:05:00",
+    "event_count": 6,
+    "description": "A successful SSH login for analyst followed a burst of 5 failed attempts from the same source.",
+    "recommendation": "Prioritize account-owner verification, review surrounding authentication activity, preserve relevant logs, and escalate according to the incident-response process."
+  },
+  {
+    "alert_id": "SSH_BRUTE_FORCE:203.0.113.45:2026-11-11T10:00:00",
+    "rule_id": "SSH_BRUTE_FORCE",
+    "severity": "HIGH",
+    "title": "Repeated SSH authentication failures",
+    "source_ip": "203.0.113.45",
+    "username": "admin",
+    "first_seen": "2026-11-11T10:00:00",
+    "last_seen": "2026-11-11T10:04:00",
+    "event_count": 5,
+    "description": "Observed 5 failed SSH authentication attempts from 203.0.113.45 within 5 minutes.",
+    "recommendation": "Review the source and targeted accounts; confirm whether the activity is expected, then apply approved blocking or account-protection procedures if malicious."
+  },
+  {
+    "alert_id": "REMOTE_ROOT_LOGIN:203.0.113.60:2026-11-11T10:06:00",
+    "rule_id": "REMOTE_ROOT_LOGIN",
+    "severity": "HIGH",
+    "title": "Remote SSH login to root account",
+    "source_ip": "203.0.113.60",
+    "username": "root",
+    "first_seen": "2026-11-11T10:06:00",
+    "last_seen": "2026-11-11T10:06:00",
+    "event_count": 1,
+    "description": "A successful SSH login to the root account was observed from a source outside common private/local address ranges: 203.0.113.60.",
+    "recommendation": "Verify whether direct remote root access is permitted; review the account and source context, and prefer named accounts with least privilege where applicable."
+  }
+]

@@ -1,0 +1,11 @@
+// ST-DET-05 | Sysmon Event 10. Requires Process Access telemetry.
+Event
+| where TimeGenerated > ago(1d)
+| where Source == "Microsoft-Windows-Sysmon" and EventID == 10
+| extend SourceImage = tostring(AdditionalFields.SourceImage),
+         TargetImage = tostring(AdditionalFields.TargetImage),
+         GrantedAccess = tostring(AdditionalFields.GrantedAccess),
+         SourceUser = tostring(AdditionalFields.SourceUser)
+| where TargetImage endswith @"\lsass.exe"
+| project TimeGenerated, Computer, SourceUser, SourceImage, TargetImage, GrantedAccess, EventID
+| order by TimeGenerated desc

@@ -1,0 +1,11 @@
+| comment "ST-DET-04 | Security 4698 task creation or Sysmon process creation with schtasks /Create."
+(index=wineventlog sourcetype=WinEventLog:Security EventCode=4698)
+OR (index=wineventlog EventCode=1 Image="*\\schtasks.exe" CommandLine="*/Create*")
+| eval task_name=coalesce(TaskName, Task_Name, task)
+| eval task_xml=coalesce(TaskContent, Task_Content, "")
+| eval cmd=coalesce(CommandLine, process, "")
+| eval suspicious_context=if(match(lower(task_xml),"powershell|wscript|cscript|appdata|temp|users\\\\public|encodedcommand")
+    OR match(lower(cmd),"powershell|appdata|temp|encodedcommand"),"review","task-created")
+| eval severity=if(suspicious_context="review","HIGH","MEDIUM"), rule_id="ST-DET-04"
+| table _time host user SubjectUserName task_name task_xml cmd suspicious_context severity rule_id
+| sort - _time

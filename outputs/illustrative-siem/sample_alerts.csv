@@ -1,0 +1,6 @@
+rule_id,severity,host,user,source,event,status
+ST-DET-01,CRITICAL,lab-linux-01,analyst,203.0.113.45,5 SSH failures followed by success,NEEDS_VALIDATION
+ST-DET-02,HIGH,LAB-WIN-07,svc_update2,local account event,New local account created (4720),ESCALATE
+ST-DET-03,HIGH,LAB-WIN-07,lab-user,Sysmon Event 1,PowerShell launched with encoded-command switch,NEEDS_VALIDATION
+ST-DET-04,HIGH,LAB-WIN-07,SYSTEM,Security 4698,Scheduled task created with user-writable script action,ESCALATE
+ST-DET-05,HIGH,LAB-WIN-07,lab-user,Sysmon Event 10,Unusual process accessed lsass.exe,ESCALATE

@@ -1,0 +1,13 @@
+// ST-DET-03 | Sysmon Event 1. Requires Sysmon process creation and command-line collection.
+Event
+| where TimeGenerated > ago(1d)
+| where Source == "Microsoft-Windows-Sysmon" and EventID == 1
+| extend CommandLine = tostring(AdditionalFields.CommandLine),
+         Image = tostring(AdditionalFields.Image),
+         ParentImage = tostring(AdditionalFields.ParentImage),
+         User = tostring(AdditionalFields.User)
+| where Image endswith @"\powershell.exe" or CommandLine has "powershell"
+| where CommandLine matches regex @"(?i)(^|\s)(-enc|-encodedcommand|/enc)(\s|$)"
+     or CommandLine has "FromBase64String"
+| project TimeGenerated, Computer, User, Image, ParentImage, CommandLine, EventID
+| order by TimeGenerated desc

@@ -1,0 +1,10 @@
+| comment "ST-DET-03 | Sysmon EventCode 1 or Security 4688; field names depend on TA/parser."
+(index=wineventlog EventCode=1) OR (index=wineventlog EventCode=4688)
+| eval image=coalesce(Image, New_Process_Name, process_path)
+| eval cmd=coalesce(CommandLine, Process_Command_Line, process)
+| where like(lower(image),"%powershell.exe") OR like(lower(cmd),"%powershell%")
+| where match(lower(cmd),"(^|\\s)(-enc|-encodedcommand|/enc)(\\s|$)")
+    OR like(lower(cmd),"%frombase64string%")
+| eval severity="HIGH", rule_id="ST-DET-03"
+| table _time host User image ParentImage cmd Hashes severity rule_id
+| sort - _time

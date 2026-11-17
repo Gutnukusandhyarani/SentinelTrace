@@ -1,0 +1,12 @@
+{
+  "alerts_processed": 30,
+  "backend": "mock",
+  "suggestion_counts": {
+    "ESCALATE": 10,
+    "FALSE_POSITIVE": 10,
+    "TRUE_POSITIVE": 10
+  },
+  "valid_suggestions": 30,
+  "human_review_required": true,
+  "decision_log": "No human decisions were recorded by this non-interactive run."
+}

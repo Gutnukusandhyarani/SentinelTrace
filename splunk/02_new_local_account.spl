@@ -1,0 +1,8 @@
+| comment "ST-DET-02 | Illustrative SPL for Windows Security EventCode 4720."
+index=wineventlog sourcetype=WinEventLog:Security EventCode=4720
+| eval new_account=coalesce(TargetUserName, Account_Name, user)
+| eval actor=coalesce(SubjectUserName, src_user)
+| stats count earliest(_time) as first_seen latest(_time) as last_seen values(ComputerName) as hosts values(actor) as actors by new_account
+| eval severity="HIGH", rule_id="ST-DET-02"
+| convert ctime(first_seen) ctime(last_seen)
+| table severity rule_id new_account actors hosts first_seen last_seen

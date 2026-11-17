@@ -1,0 +1,6 @@
+// ST-DET-02 | Event 4720: user account created. Field availability depends on connector.
+SecurityEvent
+| where TimeGenerated > ago(7d) and EventID == 4720
+| extend Actor = tostring(SubjectAccount), NewAccount = tostring(TargetAccount)
+| project TimeGenerated, Computer, Actor, NewAccount, Activity, EventID
+| order by TimeGenerated desc

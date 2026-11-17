@@ -1,0 +1,11 @@
+| comment "ST-DET-01 | Illustrative SPL. Adapt sourcetype and field extraction to the deployment."
+index=linux sourcetype=linux_secure ("Failed password" OR "Accepted password")
+| rex field=_raw "(?<event_type>Failed password|Accepted (?:password|publickey))"
+| rex field=_raw "for (?:invalid user )?(?<user>\S+) from (?<src_ip>[0-9a-fA-F:.]+)"
+| eval failure=if(like(event_type,"Failed%"),1,0), success=if(like(event_type,"Accepted%"),1,0)
+| sort 0 src_ip _time
+| streamstats time_window=5m sum(failure) as failures by src_ip
+| where success=1 AND failures>=5
+| eval severity="CRITICAL", rule_id="ST-DET-01"
+| table _time host src_ip user failures severity rule_id
+| sort - _time

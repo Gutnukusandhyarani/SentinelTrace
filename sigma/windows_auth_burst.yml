@@ -1,0 +1,141 @@
+title: Repeated Windows Logon Failures from a Single Source
+id: 3bcb2b4d-2a10-4e6f-bc6b-4fdb209b9a01
+status: experimental
+description: Detects a high count of failed logons from one source. Correlation and success-after-failure logic should be implemented in the SIEM.
+references:
+  - https://attack.mitre.org/techniques/T1110/001/
+author: SentinelTrace training lab
+date: 2026/11/17
+tags:
+  - attack.credential-access
+  - attack.t1110.001
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4625
+  condition: selection
+fields:
+  - IpAddress
+  - TargetUserName
+  - Computer
+falsepositives:
+  - Misconfigured clients
+  - Shared NAT egress
+  - Approved authentication testing
+level: medium
+---
+title: New Local User Account Created
+id: 9f9d56e1-1b51-4a7e-aef4-82f6b8f0a2b1
+status: experimental
+description: Detects Windows Security event 4720. Add context for approved provisioning and privileged-group membership.
+references:
+  - https://attack.mitre.org/techniques/T1136/001/
+author: SentinelTrace training lab
+date: 2026/11/17
+tags:
+  - attack.persistence
+  - attack.t1136.001
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4720
+  condition: selection
+fields:
+  - SubjectUserName
+  - TargetUserName
+  - Computer
+falsepositives:
+  - Approved endpoint provisioning
+  - Service installation
+level: high
+---
+title: PowerShell Executed with Encoded Command Switch
+id: da23f5d9-49fa-4639-913e-77eeab679f8c
+status: experimental
+description: Detects PowerShell process creation with common encoded-command switches. Encoding alone is not proof of malicious activity.
+references:
+  - https://attack.mitre.org/techniques/T1059/001/
+author: SentinelTrace training lab
+date: 2026/11/17
+tags:
+  - attack.execution
+  - attack.t1059.001
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  selection_image:
+    Image|endswith: '\powershell.exe'
+  selection_encoded:
+    CommandLine|contains:
+      - '-EncodedCommand'
+      - ' -enc '
+      - 'FromBase64String'
+  condition: selection_image and selection_encoded
+fields:
+  - User
+  - Image
+  - ParentImage
+  - CommandLine
+falsepositives:
+  - Approved management automation
+  - Signed deployment scripts
+level: high
+---
+title: Scheduled Task Creation
+id: 5d25da53-8958-4f85-bb8a-831f9c5a6cb5
+status: experimental
+description: Detects creation of a scheduled task using Windows Security event 4698. Review the task action and run-as identity.
+references:
+  - https://attack.mitre.org/techniques/T1053/005/
+author: SentinelTrace training lab
+date: 2026/11/17
+tags:
+  - attack.persistence
+  - attack.t1053.005
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4698
+  condition: selection
+fields:
+  - SubjectUserName
+  - TaskName
+  - TaskContent
+falsepositives:
+  - Approved software updates
+  - Backup and maintenance agents
+level: medium
+---
+title: Process Access to LSASS
+id: 1e114c15-6ff0-4a4e-b4b7-774a3502fef1
+status: experimental
+description: Detects Sysmon process access events where the target process is LSASS. Correlate source image, signer, and granted access.
+references:
+  - https://attack.mitre.org/techniques/T1003/001/
+author: SentinelTrace training lab
+date: 2026/11/17
+tags:
+  - attack.credential-access
+  - attack.t1003.001
+logsource:
+  product: windows
+  category: process_access
+detection:
+  selection:
+    TargetImage|endswith: '\lsass.exe'
+  condition: selection
+fields:
+  - SourceImage
+  - TargetImage
+  - GrantedAccess
+  - User
+falsepositives:
+  - Endpoint protection and approved diagnostic tools
+level: high

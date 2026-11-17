@@ -1,0 +1,8 @@
+| comment "ST-DET-05 | Sysmon EventCode 10. Requires Sysmon Process Access telemetry."
+index=wineventlog EventCode=10
+| where like(lower(TargetImage),"%\\lsass.exe")
+| eval source_image=coalesce(SourceImage, source_process)
+| eval severity=if(match(lower(source_image),"\\\\(protection|security|edr|defender)[^\\\\]*\\.exe$"),"MEDIUM","HIGH")
+| eval rule_id="ST-DET-05"
+| table _time host User source_image SourceProcessId TargetImage TargetProcessId GrantedAccess CallTrace severity rule_id
+| sort - _time

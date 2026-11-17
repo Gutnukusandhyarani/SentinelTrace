@@ -1,0 +1,10 @@
+// ST-DET-04 | Security 4698. Validate table/field names for the configured connector.
+SecurityEvent
+| where TimeGenerated > ago(7d) and EventID == 4698
+| extend Actor = tostring(SubjectAccount),
+         TaskName = tostring(EventData.TaskName),
+         TaskContent = tostring(EventData.TaskContent)
+| extend SuspiciousAction = TaskContent has_any ("powershell", "wscript", "cscript", "AppData", "Temp", "EncodedCommand")
+| extend Severity = iff(SuspiciousAction, "High", "Medium")
+| project TimeGenerated, Computer, Actor, TaskName, SuspiciousAction, Severity, TaskContent
+| order by TimeGenerated desc

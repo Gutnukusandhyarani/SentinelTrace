@@ -1,0 +1,212 @@
+[
+  {
+    "alert_id": "LAB-TP-01",
+    "ground_truth": "TRUE_POSITIVE",
+    "mock_suggestion": "TRUE_POSITIVE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-TP-02",
+    "ground_truth": "TRUE_POSITIVE",
+    "mock_suggestion": "TRUE_POSITIVE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-TP-03",
+    "ground_truth": "TRUE_POSITIVE",
+    "mock_suggestion": "TRUE_POSITIVE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-TP-04",
+    "ground_truth": "TRUE_POSITIVE",
+    "mock_suggestion": "TRUE_POSITIVE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-TP-05",
+    "ground_truth": "TRUE_POSITIVE",
+    "mock_suggestion": "TRUE_POSITIVE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-TP-06",
+    "ground_truth": "TRUE_POSITIVE",
+    "mock_suggestion": "TRUE_POSITIVE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-TP-07",
+    "ground_truth": "TRUE_POSITIVE",
+    "mock_suggestion": "TRUE_POSITIVE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-TP-08",
+    "ground_truth": "TRUE_POSITIVE",
+    "mock_suggestion": "TRUE_POSITIVE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-TP-09",
+    "ground_truth": "TRUE_POSITIVE",
+    "mock_suggestion": "TRUE_POSITIVE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-TP-10",
+    "ground_truth": "TRUE_POSITIVE",
+    "mock_suggestion": "TRUE_POSITIVE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-FP-01",
+    "ground_truth": "FALSE_POSITIVE",
+    "mock_suggestion": "FALSE_POSITIVE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-FP-02",
+    "ground_truth": "FALSE_POSITIVE",
+    "mock_suggestion": "FALSE_POSITIVE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-FP-03",
+    "ground_truth": "FALSE_POSITIVE",
+    "mock_suggestion": "FALSE_POSITIVE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-FP-04",
+    "ground_truth": "FALSE_POSITIVE",
+    "mock_suggestion": "FALSE_POSITIVE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-FP-05",
+    "ground_truth": "FALSE_POSITIVE",
+    "mock_suggestion": "FALSE_POSITIVE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-FP-06",
+    "ground_truth": "FALSE_POSITIVE",
+    "mock_suggestion": "FALSE_POSITIVE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-FP-07",
+    "ground_truth": "FALSE_POSITIVE",
+    "mock_suggestion": "FALSE_POSITIVE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-FP-08",
+    "ground_truth": "FALSE_POSITIVE",
+    "mock_suggestion": "FALSE_POSITIVE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-FP-09",
+    "ground_truth": "FALSE_POSITIVE",
+    "mock_suggestion": "FALSE_POSITIVE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-FP-10",
+    "ground_truth": "FALSE_POSITIVE",
+    "mock_suggestion": "FALSE_POSITIVE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-ESC-01",
+    "ground_truth": "ESCALATE",
+    "mock_suggestion": "ESCALATE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-ESC-02",
+    "ground_truth": "ESCALATE",
+    "mock_suggestion": "ESCALATE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-ESC-03",
+    "ground_truth": "ESCALATE",
+    "mock_suggestion": "ESCALATE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-ESC-04",
+    "ground_truth": "ESCALATE",
+    "mock_suggestion": "ESCALATE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-ESC-05",
+    "ground_truth": "ESCALATE",
+    "mock_suggestion": "ESCALATE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-ESC-06",
+    "ground_truth": "ESCALATE",
+    "mock_suggestion": "ESCALATE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-ESC-07",
+    "ground_truth": "ESCALATE",
+    "mock_suggestion": "ESCALATE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-ESC-08",
+    "ground_truth": "ESCALATE",
+    "mock_suggestion": "ESCALATE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-ESC-09",
+    "ground_truth": "ESCALATE",
+    "mock_suggestion": "ESCALATE",
+    "fixture_match": true,
+    "schema_valid": true
+  },
+  {
+    "alert_id": "LAB-ESC-10",
+    "ground_truth": "ESCALATE",
+    "mock_suggestion": "ESCALATE",
+    "fixture_match": true,
+    "schema_valid": true
+  }
+]

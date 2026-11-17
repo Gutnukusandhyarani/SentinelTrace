@@ -1,0 +1,20 @@
+// ST-DET-01 | Illustrative KQL. Requires Windows Security events 4625 and 4624.
+let lookback = 1d;
+let failures =
+    SecurityEvent
+    | where TimeGenerated > ago(lookback) and EventID == 4625
+    | extend SrcIp = tostring(IpAddress), Account = tostring(TargetAccount)
+    | summarize FailureCount=count(), FirstFailure=min(TimeGenerated), LastFailure=max(TimeGenerated),
+                Accounts=make_set(Account) by Computer, SrcIp, bin(TimeGenerated, 5m)
+    | where FailureCount >= 5;
+let successes =
+    SecurityEvent
+    | where TimeGenerated > ago(lookback) and EventID == 4624
+    | extend SrcIp = tostring(IpAddress), Account = tostring(TargetAccount)
+    | project SuccessTime=TimeGenerated, Computer, SrcIp, SuccessAccount=Account, LogonType;
+failures
+| join kind=leftouter successes on Computer, SrcIp
+| where isempty(SuccessTime) or (SuccessTime between (FirstFailure .. FirstFailure + 10m))
+| extend Severity=iff(isnotempty(SuccessTime), "Critical", "High")
+| project Severity, Computer, SrcIp, FailureCount, Accounts, FirstFailure, LastFailure, SuccessTime, SuccessAccount, LogonType
+| order by FailureCount desc

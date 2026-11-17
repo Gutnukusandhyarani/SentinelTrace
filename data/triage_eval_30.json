@@ -1,0 +1,514 @@
+{
+  "alerts": [
+    {
+      "alert_id": "LAB-TP-01",
+      "rule_id": "ST-DET-01",
+      "severity": "Critical",
+      "summary": "Repeated authentication failures followed by a successful login on lab-host-01",
+      "description": "Synthetic training sequence from 198.51.100.1: seven failures and a later success.",
+      "host": "lab-host-01",
+      "user": "analyst1",
+      "src_ip": "198.51.100.1",
+      "timestamp": "2026-11-17T10:05:00Z",
+      "signals": {
+        "failed_attempts": 7,
+        "success_after_failures": true,
+        "approved_change": false
+      },
+      "ground_truth": "TRUE_POSITIVE"
+    },
+    {
+      "alert_id": "LAB-TP-02",
+      "rule_id": "ST-DET-01",
+      "severity": "Critical",
+      "summary": "Repeated authentication failures followed by a successful login on lab-host-02",
+      "description": "Synthetic training sequence from 198.51.100.2: seven failures and a later success.",
+      "host": "lab-host-02",
+      "user": "analyst2",
+      "src_ip": "198.51.100.2",
+      "timestamp": "2026-11-17T10:05:00Z",
+      "signals": {
+        "failed_attempts": 7,
+        "success_after_failures": true,
+        "approved_change": false
+      },
+      "ground_truth": "TRUE_POSITIVE"
+    },
+    {
+      "alert_id": "LAB-TP-03",
+      "rule_id": "ST-DET-01",
+      "severity": "Critical",
+      "summary": "Repeated authentication failures followed by a successful login on lab-host-03",
+      "description": "Synthetic training sequence from 198.51.100.3: seven failures and a later success.",
+      "host": "lab-host-03",
+      "user": "analyst3",
+      "src_ip": "198.51.100.3",
+      "timestamp": "2026-11-17T10:05:00Z",
+      "signals": {
+        "failed_attempts": 7,
+        "success_after_failures": true,
+        "approved_change": false
+      },
+      "ground_truth": "TRUE_POSITIVE"
+    },
+    {
+      "alert_id": "LAB-TP-04",
+      "rule_id": "ST-DET-01",
+      "severity": "Critical",
+      "summary": "Repeated authentication failures followed by a successful login on lab-host-04",
+      "description": "Synthetic training sequence from 198.51.100.4: seven failures and a later success.",
+      "host": "lab-host-04",
+      "user": "analyst4",
+      "src_ip": "198.51.100.4",
+      "timestamp": "2026-11-17T10:05:00Z",
+      "signals": {
+        "failed_attempts": 7,
+        "success_after_failures": true,
+        "approved_change": false
+      },
+      "ground_truth": "TRUE_POSITIVE"
+    },
+    {
+      "alert_id": "LAB-TP-05",
+      "rule_id": "ST-DET-01",
+      "severity": "Critical",
+      "summary": "Repeated authentication failures followed by a successful login on lab-host-05",
+      "description": "Synthetic training sequence from 198.51.100.5: seven failures and a later success.",
+      "host": "lab-host-05",
+      "user": "analyst5",
+      "src_ip": "198.51.100.5",
+      "timestamp": "2026-11-17T10:05:00Z",
+      "signals": {
+        "failed_attempts": 7,
+        "success_after_failures": true,
+        "approved_change": false
+      },
+      "ground_truth": "TRUE_POSITIVE"
+    },
+    {
+      "alert_id": "LAB-TP-06",
+      "rule_id": "ST-DET-01",
+      "severity": "Critical",
+      "summary": "Repeated authentication failures followed by a successful login on lab-host-06",
+      "description": "Synthetic training sequence from 198.51.100.6: seven failures and a later success.",
+      "host": "lab-host-06",
+      "user": "analyst6",
+      "src_ip": "198.51.100.6",
+      "timestamp": "2026-11-17T10:05:00Z",
+      "signals": {
+        "failed_attempts": 7,
+        "success_after_failures": true,
+        "approved_change": false
+      },
+      "ground_truth": "TRUE_POSITIVE"
+    },
+    {
+      "alert_id": "LAB-TP-07",
+      "rule_id": "ST-DET-01",
+      "severity": "Critical",
+      "summary": "Repeated authentication failures followed by a successful login on lab-host-07",
+      "description": "Synthetic training sequence from 198.51.100.7: seven failures and a later success.",
+      "host": "lab-host-07",
+      "user": "analyst7",
+      "src_ip": "198.51.100.7",
+      "timestamp": "2026-11-17T10:05:00Z",
+      "signals": {
+        "failed_attempts": 7,
+        "success_after_failures": true,
+        "approved_change": false
+      },
+      "ground_truth": "TRUE_POSITIVE"
+    },
+    {
+      "alert_id": "LAB-TP-08",
+      "rule_id": "ST-DET-01",
+      "severity": "Critical",
+      "summary": "Repeated authentication failures followed by a successful login on lab-host-08",
+      "description": "Synthetic training sequence from 198.51.100.8: seven failures and a later success.",
+      "host": "lab-host-08",
+      "user": "analyst8",
+      "src_ip": "198.51.100.8",
+      "timestamp": "2026-11-17T10:05:00Z",
+      "signals": {
+        "failed_attempts": 7,
+        "success_after_failures": true,
+        "approved_change": false
+      },
+      "ground_truth": "TRUE_POSITIVE"
+    },
+    {
+      "alert_id": "LAB-TP-09",
+      "rule_id": "ST-DET-01",
+      "severity": "Critical",
+      "summary": "Repeated authentication failures followed by a successful login on lab-host-09",
+      "description": "Synthetic training sequence from 198.51.100.9: seven failures and a later success.",
+      "host": "lab-host-09",
+      "user": "analyst9",
+      "src_ip": "198.51.100.9",
+      "timestamp": "2026-11-17T10:05:00Z",
+      "signals": {
+        "failed_attempts": 7,
+        "success_after_failures": true,
+        "approved_change": false
+      },
+      "ground_truth": "TRUE_POSITIVE"
+    },
+    {
+      "alert_id": "LAB-TP-10",
+      "rule_id": "ST-DET-01",
+      "severity": "Critical",
+      "summary": "Repeated authentication failures followed by a successful login on lab-host-10",
+      "description": "Synthetic training sequence from 198.51.100.10: seven failures and a later success.",
+      "host": "lab-host-10",
+      "user": "analyst10",
+      "src_ip": "198.51.100.10",
+      "timestamp": "2026-11-17T10:05:00Z",
+      "signals": {
+        "failed_attempts": 7,
+        "success_after_failures": true,
+        "approved_change": false
+      },
+      "ground_truth": "TRUE_POSITIVE"
+    },
+    {
+      "alert_id": "LAB-FP-01",
+      "rule_id": "ST-DET-04",
+      "severity": "Medium",
+      "summary": "Scheduled task creation during approved endpoint maintenance on lab-host-01",
+      "description": "Synthetic event has a verified change ticket and approved software-maintenance context.",
+      "host": "lab-host-01",
+      "user": "SYSTEM",
+      "src_ip": "192.0.2.20",
+      "timestamp": "2026-11-17T11:00:00Z",
+      "signals": {
+        "failed_attempts": 0,
+        "success_after_failures": false,
+        "approved_change": true
+      },
+      "ground_truth": "FALSE_POSITIVE"
+    },
+    {
+      "alert_id": "LAB-FP-02",
+      "rule_id": "ST-DET-04",
+      "severity": "Medium",
+      "summary": "Scheduled task creation during approved endpoint maintenance on lab-host-02",
+      "description": "Synthetic event has a verified change ticket and approved software-maintenance context.",
+      "host": "lab-host-02",
+      "user": "SYSTEM",
+      "src_ip": "192.0.2.20",
+      "timestamp": "2026-11-17T11:00:00Z",
+      "signals": {
+        "failed_attempts": 0,
+        "success_after_failures": false,
+        "approved_change": true
+      },
+      "ground_truth": "FALSE_POSITIVE"
+    },
+    {
+      "alert_id": "LAB-FP-03",
+      "rule_id": "ST-DET-04",
+      "severity": "Medium",
+      "summary": "Scheduled task creation during approved endpoint maintenance on lab-host-03",
+      "description": "Synthetic event has a verified change ticket and approved software-maintenance context.",
+      "host": "lab-host-03",
+      "user": "SYSTEM",
+      "src_ip": "192.0.2.20",
+      "timestamp": "2026-11-17T11:00:00Z",
+      "signals": {
+        "failed_attempts": 0,
+        "success_after_failures": false,
+        "approved_change": true
+      },
+      "ground_truth": "FALSE_POSITIVE"
+    },
+    {
+      "alert_id": "LAB-FP-04",
+      "rule_id": "ST-DET-04",
+      "severity": "Medium",
+      "summary": "Scheduled task creation during approved endpoint maintenance on lab-host-04",
+      "description": "Synthetic event has a verified change ticket and approved software-maintenance context.",
+      "host": "lab-host-04",
+      "user": "SYSTEM",
+      "src_ip": "192.0.2.20",
+      "timestamp": "2026-11-17T11:00:00Z",
+      "signals": {
+        "failed_attempts": 0,
+        "success_after_failures": false,
+        "approved_change": true
+      },
+      "ground_truth": "FALSE_POSITIVE"
+    },
+    {
+      "alert_id": "LAB-FP-05",
+      "rule_id": "ST-DET-04",
+      "severity": "Medium",
+      "summary": "Scheduled task creation during approved endpoint maintenance on lab-host-05",
+      "description": "Synthetic event has a verified change ticket and approved software-maintenance context.",
+      "host": "lab-host-05",
+      "user": "SYSTEM",
+      "src_ip": "192.0.2.20",
+      "timestamp": "2026-11-17T11:00:00Z",
+      "signals": {
+        "failed_attempts": 0,
+        "success_after_failures": false,
+        "approved_change": true
+      },
+      "ground_truth": "FALSE_POSITIVE"
+    },
+    {
+      "alert_id": "LAB-FP-06",
+      "rule_id": "ST-DET-04",
+      "severity": "Medium",
+      "summary": "Scheduled task creation during approved endpoint maintenance on lab-host-06",
+      "description": "Synthetic event has a verified change ticket and approved software-maintenance context.",
+      "host": "lab-host-06",
+      "user": "SYSTEM",
+      "src_ip": "192.0.2.20",
+      "timestamp": "2026-11-17T11:00:00Z",
+      "signals": {
+        "failed_attempts": 0,
+        "success_after_failures": false,
+        "approved_change": true
+      },
+      "ground_truth": "FALSE_POSITIVE"
+    },
+    {
+      "alert_id": "LAB-FP-07",
+      "rule_id": "ST-DET-04",
+      "severity": "Medium",
+      "summary": "Scheduled task creation during approved endpoint maintenance on lab-host-07",
+      "description": "Synthetic event has a verified change ticket and approved software-maintenance context.",
+      "host": "lab-host-07",
+      "user": "SYSTEM",
+      "src_ip": "192.0.2.20",
+      "timestamp": "2026-11-17T11:00:00Z",
+      "signals": {
+        "failed_attempts": 0,
+        "success_after_failures": false,
+        "approved_change": true
+      },
+      "ground_truth": "FALSE_POSITIVE"
+    },
+    {
+      "alert_id": "LAB-FP-08",
+      "rule_id": "ST-DET-04",
+      "severity": "Medium",
+      "summary": "Scheduled task creation during approved endpoint maintenance on lab-host-08",
+      "description": "Synthetic event has a verified change ticket and approved software-maintenance context.",
+      "host": "lab-host-08",
+      "user": "SYSTEM",
+      "src_ip": "192.0.2.20",
+      "timestamp": "2026-11-17T11:00:00Z",
+      "signals": {
+        "failed_attempts": 0,
+        "success_after_failures": false,
+        "approved_change": true
+      },
+      "ground_truth": "FALSE_POSITIVE"
+    },
+    {
+      "alert_id": "LAB-FP-09",
+      "rule_id": "ST-DET-04",
+      "severity": "Medium",
+      "summary": "Scheduled task creation during approved endpoint maintenance on lab-host-09",
+      "description": "Synthetic event has a verified change ticket and approved software-maintenance context.",
+      "host": "lab-host-09",
+      "user": "SYSTEM",
+      "src_ip": "192.0.2.20",
+      "timestamp": "2026-11-17T11:00:00Z",
+      "signals": {
+        "failed_attempts": 0,
+        "success_after_failures": false,
+        "approved_change": true
+      },
+      "ground_truth": "FALSE_POSITIVE"
+    },
+    {
+      "alert_id": "LAB-FP-10",
+      "rule_id": "ST-DET-04",
+      "severity": "Medium",
+      "summary": "Scheduled task creation during approved endpoint maintenance on lab-host-10",
+      "description": "Synthetic event has a verified change ticket and approved software-maintenance context.",
+      "host": "lab-host-10",
+      "user": "SYSTEM",
+      "src_ip": "192.0.2.20",
+      "timestamp": "2026-11-17T11:00:00Z",
+      "signals": {
+        "failed_attempts": 0,
+        "success_after_failures": false,
+        "approved_change": true
+      },
+      "ground_truth": "FALSE_POSITIVE"
+    },
+    {
+      "alert_id": "LAB-ESC-01",
+      "rule_id": "ST-DET-02",
+      "severity": "High",
+      "summary": "Alert requires context validation on lab-host-01",
+      "description": "Synthetic alert contains incomplete ownership and change-control context.",
+      "host": "lab-host-01",
+      "user": "unknown",
+      "src_ip": "203.0.113.1",
+      "timestamp": "2026-11-17T12:00:00Z",
+      "signals": {
+        "failed_attempts": 1,
+        "success_after_failures": false,
+        "approved_change": false
+      },
+      "ground_truth": "ESCALATE"
+    },
+    {
+      "alert_id": "LAB-ESC-02",
+      "rule_id": "ST-DET-05",
+      "severity": "High",
+      "summary": "Alert requires context validation on lab-host-02",
+      "description": "Synthetic alert contains incomplete ownership and change-control context.",
+      "host": "lab-host-02",
+      "user": "unknown",
+      "src_ip": "203.0.113.2",
+      "timestamp": "2026-11-17T12:00:00Z",
+      "signals": {
+        "failed_attempts": 1,
+        "success_after_failures": false,
+        "approved_change": false
+      },
+      "ground_truth": "ESCALATE"
+    },
+    {
+      "alert_id": "LAB-ESC-03",
+      "rule_id": "ST-DET-02",
+      "severity": "High",
+      "summary": "Alert requires context validation on lab-host-03",
+      "description": "Synthetic alert contains incomplete ownership and change-control context.",
+      "host": "lab-host-03",
+      "user": "unknown",
+      "src_ip": "203.0.113.3",
+      "timestamp": "2026-11-17T12:00:00Z",
+      "signals": {
+        "failed_attempts": 1,
+        "success_after_failures": false,
+        "approved_change": false
+      },
+      "ground_truth": "ESCALATE"
+    },
+    {
+      "alert_id": "LAB-ESC-04",
+      "rule_id": "ST-DET-05",
+      "severity": "High",
+      "summary": "Alert requires context validation on lab-host-04",
+      "description": "Synthetic alert contains incomplete ownership and change-control context.",
+      "host": "lab-host-04",
+      "user": "unknown",
+      "src_ip": "203.0.113.4",
+      "timestamp": "2026-11-17T12:00:00Z",
+      "signals": {
+        "failed_attempts": 1,
+        "success_after_failures": false,
+        "approved_change": false
+      },
+      "ground_truth": "ESCALATE"
+    },
+    {
+      "alert_id": "LAB-ESC-05",
+      "rule_id": "ST-DET-02",
+      "severity": "High",
+      "summary": "Alert requires context validation on lab-host-05",
+      "description": "Synthetic alert contains incomplete ownership and change-control context.",
+      "host": "lab-host-05",
+      "user": "unknown",
+      "src_ip": "203.0.113.5",
+      "timestamp": "2026-11-17T12:00:00Z",
+      "signals": {
+        "failed_attempts": 1,
+        "success_after_failures": false,
+        "approved_change": false
+      },
+      "ground_truth": "ESCALATE"
+    },
+    {
+      "alert_id": "LAB-ESC-06",
+      "rule_id": "ST-DET-05",
+      "severity": "High",
+      "summary": "Alert requires context validation on lab-host-06",
+      "description": "Synthetic alert contains incomplete ownership and change-control context.",
+      "host": "lab-host-06",
+      "user": "unknown",
+      "src_ip": "203.0.113.6",
+      "timestamp": "2026-11-17T12:00:00Z",
+      "signals": {
+        "failed_attempts": 1,
+        "success_after_failures": false,
+        "approved_change": false
+      },
+      "ground_truth": "ESCALATE"
+    },
+    {
+      "alert_id": "LAB-ESC-07",
+      "rule_id": "ST-DET-02",
+      "severity": "High",
+      "summary": "Alert requires context validation on lab-host-07",
+      "description": "Synthetic alert contains incomplete ownership and change-control context.",
+      "host": "lab-host-07",
+      "user": "unknown",
+      "src_ip": "203.0.113.7",
+      "timestamp": "2026-11-17T12:00:00Z",
+      "signals": {
+        "failed_attempts": 1,
+        "success_after_failures": false,
+        "approved_change": false
+      },
+      "ground_truth": "ESCALATE"
+    },
+    {
+      "alert_id": "LAB-ESC-08",
+      "rule_id": "ST-DET-05",
+      "severity": "High",
+      "summary": "Alert requires context validation on lab-host-08",
+      "description": "Synthetic alert contains incomplete ownership and change-control context.",
+      "host": "lab-host-08",
+      "user": "unknown",
+      "src_ip": "203.0.113.8",
+      "timestamp": "2026-11-17T12:00:00Z",
+      "signals": {
+        "failed_attempts": 1,
+        "success_after_failures": false,
+        "approved_change": false
+      },
+      "ground_truth": "ESCALATE"
+    },
+    {
+      "alert_id": "LAB-ESC-09",
+      "rule_id": "ST-DET-02",
+      "severity": "High",
+      "summary": "Alert requires context validation on lab-host-09",
+      "description": "Synthetic alert contains incomplete ownership and change-control context.",
+      "host": "lab-host-09",
+      "user": "unknown",
+      "src_ip": "203.0.113.9",
+      "timestamp": "2026-11-17T12:00:00Z",
+      "signals": {
+        "failed_attempts": 1,
+        "success_after_failures": false,
+        "approved_change": false
+      },
+      "ground_truth": "ESCALATE"
+    },
+    {
+      "alert_id": "LAB-ESC-10",
+      "rule_id": "ST-DET-05",
+      "severity": "High",
+      "summary": "Alert requires context validation on lab-host-10",
+      "description": "Synthetic alert contains incomplete ownership and change-control context.",
+      "host": "lab-host-10",
+      "user": "unknown",
+      "src_ip": "203.0.113.10",
+      "timestamp": "2026-11-17T12:00:00Z",
+      "signals": {
+        "failed_attempts": 1,
+        "success_after_failures": false,
+        "approved_change": false
+      },
+      "ground_truth": "ESCALATE"
+    }
+  ]
+}

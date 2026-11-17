@@ -4,7 +4,7 @@
 
 SentinelTrace began as a Python-based Linux SSH authentication log analyzer. The expanded project documents a practical L1 SOC workflow across Linux and Windows telemetry: parse events, detect suspicious patterns, prioritize alerts, investigate evidence, write analyst notes, and keep final decisions under human control.
 
-> **Evidence and scope:** The bundled examples use synthetic training data and documentation-only addresses. The SIEM queries and HTML dashboard preview are illustrative examples, not exports from a connected Splunk or Microsoft Sentinel workspace. The triage-copilot mock backend is deterministic; its fixture results are not an LLM accuracy score. No production environment, employer telemetry, or client data is involved.
+> **Evidence and scope:** The bundled examples use synthetic training data and documentation-only addresses. The SIEM queries and interactive dashboard alert records are illustrative examples, not exports from a connected Splunk or Microsoft Sentinel workspace. The triage-copilot mock backend is deterministic; its fixture results are not an LLM accuracy score. No production environment, employer telemetry, or client data is involved.
 
 ## Project highlights
 
@@ -120,6 +120,10 @@ SentinelTrace/
 │   └── test_triage_copilot.py
 ├── scripts/
 │   └── evaluate_copilot.py
+├── dashboards/
+│   ├── index.html
+│   ├── styles.css
+│   └── dashboard.js
 ├── splunk/
 ├── kql/
 ├── sigma/
@@ -136,6 +140,20 @@ SentinelTrace/
     ├── copilot_eval/
     └── illustrative-siem/
 ```
+
+## Interactive SOC dashboard
+
+A responsive, static dashboard is included in [`dashboards/`](dashboards/). It reads the repository's own SIEM example alerts, mock copilot suggestions, mock evaluation summary, and original SSH sample log. It includes searchable/filterable tables, record-detail drawers, an SSH timeline, severity and verdict visualizations, and filtered CSV export. No backend, API key, npm install, or paid service is required.
+
+Run locally from the repository root:
+
+```powershell
+py -m http.server 8000
+```
+
+Open `http://localhost:8000/dashboards/`. For public access, enable GitHub Pages from the default branch and repository root; the dashboard will be available at `https://gutnukusandhyarani.github.io/SentinelTrace/dashboards/` after the Pages deployment completes. See [`docs/dashboard-guide.md`](docs/dashboard-guide.md) for the source-file map and deployment instructions.
+
+**Dashboard evidence note:** totals are read from version-controlled sample files. The SIEM queue is illustrative, while the copilot suggestions and fixture metrics come from the deterministic mock backend. None of these are live SIEM alerts or an LLM accuracy benchmark.
 
 ## Limitations and next steps
 
